@@ -57,7 +57,6 @@ function newQuestions(){
     const quest = inputQuestion.value;
     const ans = inputAnswer.value;
     data.cards.push({question : quest, answer: ans})
-    console.log(quest)
 }
 
 const addButton = document.getElementById('addButton');
