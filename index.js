@@ -1,5 +1,4 @@
 function showAnswer() {
-    console.log('hello');
     document.getElementById('card').innerHTML = null;
     const ans = document.createElement('h1');
     card.appendChild(ans);
@@ -33,7 +32,6 @@ function showAnswer() {
             card.innerHTML = null;
             const h1 = document.createElement('h1');
             const question = currentData.cards[i].question;
-            console.log(question);
             h1.innerHTML = question;
             card.appendChild(h1);
             const cards = currentData.cards[i];
@@ -48,10 +46,23 @@ function showAnswer() {
     }
  }
  giveQuestion(data)
- const button = document.querySelector('button');
- console.log(button);
- button.onclick = function(){
+ const nextButton = document.getElementById('newButton');
+ nextButton.onclick = function(){
     giveQuestion(data);
 }
  
- 
+function newQuestions(){
+    const inputQuestion = document.getElementById('question');
+    const inputAnswer = document.getElementById('answer');
+    const quest = inputQuestion.value;
+    const ans = inputAnswer.value;
+    data.cards.push({question : quest, answer: ans})
+    console.log(quest)
+}
+
+const addButton = document.getElementById('addButton');
+addButton.onclick = function() {
+
+    newQuestions()
+    
+}

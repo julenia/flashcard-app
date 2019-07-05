@@ -13,8 +13,20 @@
             </section>
            
             <div class="button">
-                        <button type="default">New Flashcard</button>
+                <button type="default" id="newButton">New Flashcard</button>
+            </div>
+            <form onsubmit="newQuestions(); return false">
+                    <div class="formSection">
+                        <label for="question">Give the country:</label>
+                        <input type="text" id="question">
+                        <label for="answer">Give the capital:</label>
+                        <input type="text" id="answer">
                     </div>
+                    <div class="button">
+                        <button type="default" id="addButton">Search</button>
+                     </div>
+            </form>
+
             
                 
         </main>
